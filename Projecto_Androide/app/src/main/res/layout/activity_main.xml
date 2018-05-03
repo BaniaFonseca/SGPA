@@ -1,0 +1,78 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="unilurio_fe.fe_esimop_ac.MainActivity">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Unilurio - Faculdade de Engenharia"
+            android:id="@+id/textView"
+            android:background="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#fff"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_main"
+            android:layout_weight="1.60"
+            android:layout_marginTop="90dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/liner_login"
+        android:background="@color/wallet_highlighted_text_holo_light"
+        android:layout_gravity="center_horizontal|bottom"
+        android:weightSum="1">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_web_fe"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:background="@android:color/holo_blue_dark"
+
+            android:text="FE-Wedsite"
+            android:layout_weight="0.45" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_gmail"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Gmail"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="0.26" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_google"
+            android:textColor="@color/abc_primary_text_disable_only_material_dark"
+            android:background="@android:color/holo_blue_dark"
+            android:text="Google +"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="0.34" />
+
+    </LinearLayout>
+</FrameLayout>

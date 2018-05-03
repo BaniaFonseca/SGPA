@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">eSimop-ac</string>
+    <string name="title_activity_main">eSimop-ac</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Sair</string>
+    <string name="title_activity_publicar_pauta">Lista de Disciplinas</string>
+    <string name="title_activity_publicar_avaliacao">Lista de Avaliações</string>
+    <string name="title_activity_sobre_e_simop_ac">Detalhes do eSimop_ac</string>
+    <string name="title_section1">Detalhes Gerais</string>
+    <string name="title_section2">Sistema de Avaliação</string>
+    <string name="title_section3">Notificações + </string>
+    <string name="txt_website">FE-Website </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example"></string>
+    <string name="title_activity_publiacar_pauta_disciplinas">Lista de Disciplinas</string>
+</resources>

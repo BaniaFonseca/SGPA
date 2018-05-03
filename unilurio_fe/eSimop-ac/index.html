@@ -1,0 +1,651 @@
+﻿<!DOCTYPE HTML>
+
+<html manifest="offline_app/arquivo.manifest">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>Tela Autenticacao</title>
+
+<link href="../_assets/css/jquery.mobile-1.4.3.min.css" rel="stylesheet" type="text/css"/>
+<link href="../_assets/css/jquery.mobile.structure-1.4.3.min.css" rel="stylesheet" type="text/css"/>
+<link href="../_assets/css/jquery.mobile.theme-1.4.3.min.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="css/cabecalho.css" type="text/css">
+
+<link href="css/table_style.css" rel="stylesheet" type="text/css"/>
+<script src="../_assets/js/jquery-1.7.1.min.js"></script>
+<script src="../_assets/js/jquery.mobile-1.4.3.min.js"></script>
+<script type="text/javascript" src="offlineApp/bwH5LS.js"></script>
+
+<script type="text/javascript" src="js/js_data_base.js"> </script>
+<script type="text/javascript" src="js/js_function.js"> </script>
+<script type="text/javascript" src="libs/jqueryAlerts/scripts/jquery.alerts.js"> </script>
+<link   type="text/css" href="libs/jqueryAlerts/css/jquery.alerts.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/button_style.css" type="text/css">
+
+
+<style type="text/css">
+
+body {
+    text-align:center;font-size: 14px;
+}
+
+
+.custom-corners .ui-bar {
+  -webkit-border-top-left-radius: inherit;
+  border-top-left-radius: inherit;
+  -webkit-border-top-right-radius: inherit;
+  border-top-right-radius: inherit;
+
+
+}
+.custom-corners .ui-body {
+  border-top-width: 0;
+  -webkit-border-bottom-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+  -webkit-border-bottom-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+#result{font-family:serif;font-size:12px;}
+
+@media screen and (min-width: 10em) {
+
+.fundo{
+
+          background: -moz-linear-gradient(left, white 15%,  #ccc,#365775);
+          background:-webkit-linear-gradient(left, white 15%,  #ccc,#365775);
+          background:-ms-linear-gradient(left, white 15%,  #ccc,#365775);
+          background:-o-linear-gradient(left, white 15%,  #ccc,#365775);
+          background-attachment: fixed;
+
+   }
+
+.logo h6{font-size: 8px; font-weight: normal;
+text-align: center; display: inline;}
+
+.logo img{width: 30px; margin-left: -2em;}
+
+.texto h2{font-size: 12px;margin-left: 10em;}
+  h5{font-size: 20px; color: green; margin-left: 5em;}
+}
+
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 20em) {
+
+    .fundo{
+
+     background: -moz-linear-gradient(left, white 15%, #365775, #ccc);
+     background:-webkit-linear-gradient(left, white 15%, #365775, #ccc);
+    background:-ms-linear-gradient(left, white 15%, #365775, #ccc);
+    background:-o-linear-gradient(left, white 15%, #365775, #ccc);
+    background-attachment: fixed;
+   }
+
+    .logo h6{font-size: 12px;font-weight: normal;
+text-align: center; display: inline;}
+
+.logo img{width: 40px; margin-left: -5em;}
+
+    h5{font-size: 20px;}
+   .texto h2{font-size: 15px;margin-left: 10em;}
+   .lista_geral{top:0px;}
+}
+
+/* Show priority 2 at 560px (35em x 16px) */
+@media screen and (min-width: 35em) {
+
+
+    h5{font-size: 25px}
+
+        .logo h6{font-size: 12px;font-weight: normal;
+text-align: center; display: inline;}
+
+.logo img{width: 45px; margin-left: -2em;}
+
+   .texto h2{font-size: 20px;margin-left: 10em;}
+}
+
+/* Show priority 3 at 720px (45em x 16px) */
+@media screen and (min-width: 45em) {
+
+     .fundo{
+
+          background-image: -moz-linear-gradient(left, white 10%, #365775, #ccc) 
+          background-image:-webkit-linear-gradient(left, white 10%, #365775, #ccc);
+          background-image:-ms-linear-gradient(left, white 10%, #365775, #ccc);
+         background-image:-o-linear-gradient(left, white 10%, #365775, #ccc);
+         background-attachment: fixed;
+
+      }
+
+	.logo h6{font-size: 12px;font-weight: normal;
+	text-align: center; display: inline;}
+
+	.logo img{width: 70px; margin-left: -2em;}
+
+	   .texto h2{font-size: 28px;margin-left: 5em;}
+
+		h5{font-size: 32px}
+	}
+
+    #put_image{background: url("img/fundo1.jpg");}
+
+	#image_est {
+	
+	  margin-right:1em;
+	  margin-top:-1em;
+	   
+	}
+
+	#push{margin-top:-.1em;}
+
+	.cab{
+
+		background: -moz-linear-gradient(#c3cebc, black, #c3cebc);
+		background:-webkit-linear-gradient(#c3cebc, black, #c3cebc);
+		background:-ms-linear-gradient(#c3cebc,black, #c3cebc);
+		background:-o-linear-gradient(#c3cebc, black, #c3cebc);
+		padding:15px;
+		color:white;
+		margin-top:-.1em;
+		margin-botton:-.1em;
+		font-family:serif;
+	}
+		ul {
+     list-style-type: none;
+}
+
+
+#info1 {
+    -webkit-transition: -webkit-transform 0.1s ease-in;
+}
+
+#info1 :hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -moz-box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+	-webkit-transform: rotateX(45deg); -webkit-transform-origin: 50% 80%;
+}
+
+/*#info1  {
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+}
+
+#info1 :hover {
+    -moz-transform: rotate(360deg) scale(2);
+    -webkit-transform: rotate(360deg) scale(2);
+    transform: rotate(360deg) scale(2);
+}*/
+
+.body { width: 200px; height: 200px;
+        background-color: beige; border: 1px solid brown;
+        font-size: 150%; padding: 10px;
+        -webkit-transform: rotateY(90deg);
+		
+}
+
+body{
+	overflow:hide;
+	overflow:visible;
+	overflow-y: hidden;
+                    overflow-style: auto;
+}
+		
+#recupera_senhas:hover{color:red}
+
+
+
+</style>
+
+</head>
+
+
+<body onload="initDisp()">
+   
+<!-- inicio da pagina principal box-shadow: 1px 3px 20px 0 #aaa"-->
+
+<div  data-role="page" id="pagel">
+
+    <div data-role="header" style="border:none;"  data-position="fixed" class="fundo" data-theme="b">
+	
+        <div class="texto" style="font-weight: normal;" align="center">
+
+             <h5 style="color:white; font-family:serif;margin-top: .5em">Sistema Móvel de Pautas Académicas</h5>
+             <h2 style="color:#ff9933; margin-bottom: -2.5em; margin-top: -2em">Unilurio - Faculdade de Engenharia</h2>
+
+        </div>
+
+        <div class="logo" style="float: left; margin-bottom:.6em;
+		font-size:10px; margin-left: 2.5em; margin-top: -.8em; font-family:consolas; color:blue">
+             <img src="img/logo_unilurio.jpg"/><h6>eSimop-ac</h6>
+        </div>
+	
+      </div>
+	  
+    <div data-role="content" align="center" >
+	
+	
+	    <div class="ui-corner-all custom-corners" style="width: 80%; margin-top:7em" >
+		
+       <div class="ui-bar ui-bar-a" style="border:none; border-bottom: 5px solid #ff9933; background:none" data-theme="b">
+
+            <h3 style="float:left; font-family:serif;margin-buttom:-1em;">
+
+            <a href="http://fe.unilurio.ac.mz" target="_blank" 
+			class="ui-btn ui-corner-all ui-btn-inline ui-btn-b footer-button-left ui-btn-b ui-btn-icon-right ui-icon-navigation" 
+			id="reg_plano" style="font-family: serif; color:white; padding: 8px 35px; margin-left:-1em">WebSite-FE</a>
+			
+            <a  href="http://mail.google.com/mail/mu/mp/" target="_blank" class="ui-btn ui-corner-all 
+			ui-btn-inline footer-button-right ui-btn-b ui-btn-b ui-btn-icon-right ui-icon-mail" 
+			id="reg_pauta" style="font-family: serif; color:white; padding: 8px 40px; margin-left:-.7em">Gmail</a>
+            
+            </h3>
+
+            <div style="float:right; margin-top:-.1em; margin-buttom:-1em">
+			 
+				<h3 class="estado_esimo-ac" style="color:red"></h3>
+                         
+				 <!--button data-mini="true" id="sair" data-inline="true" data-icon="home" 
+				 class="network" data-iconpos="right" style="font-family:serif">Online</button-->
+             </div>
+        </div>
+	
+	<div class="ui-body ui-body-d" style=""><br>
+	
+		
+		
+		<div style="width:400px; border:1px solid #ccc; margin-right:-1em; border-radius:5px; float:right">
+    
+	<div class="login_ctr">
+	
+	<form  class="userlogin" method="post" action="view/User_login.php">
+        <div style="padding:15px 30px;">
+            <h3 style="color:green" align="center" style="font-size:15px">Autenticação</h3>
+
+            <input name="name" id="name" value="" data-clear-btn="true" placeholder="Endereço electronico" type="text">
+           
+            <input name="pass" id="pass" value="" data-clear-btn="true"  placeholder="Palavra passe" type="password">
+            
+          <div> <a href="#"  id="btnlogin" onClick="login2();" class="show-page-loading-msg ui-btn ui-corner-all
+           ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Entrar</a>
+           </div>
+		   
+			
+			<div align="right">
+	<a href="#" data-rel="popup" data-position-to="window" id="recupera_senhas"
+	  data-transition="pop" style="text-decoration:none;font-family:serif; margin-bottom:-1em; font-size:14px">Esqueci a palavra passe !</a></div>
+		   
+        </div>
+        <div id="myresultlogin" align="center"></div><br>
+    </form>
+	
+    
+	</div> <!--- fim ctr login-->
+	
+	<div class="esqueceu_senha" align="center">
+		
+		    <h4 style="color:green;">Solicitar Dados de Autenticação</h4>			
+			
+			<form  style="padding:20px 35px;">
+				
+				<input type="email" name="rec_email" value="" id="rec_email" placeholder="Correio electronico ..."/>
+				
+				<input type="text" name="rec_nome" value="" id="rec_nome" placeholder="Nome completo ..."/>
+			  
+			
+			</form><br>
+			
+			
+			<div style="background:#E8E8E8" align="right">
+				
+				<a href="#" style="font-size:12px; background:#696969; border:none; padding:9px 30px" 
+				class="ui-btn ui-corner-all ui-shadow ui-icon-foward ui-btn-inline ui-btn-b"
+							data-theme="a" data-transition="slide" id="btnBack">  Voltar  </a>
+				
+				<a href="#" style="font-size:12px; background:#007CCC; border:none" 
+				class="ui-btn ui-corner-all ui-shadow ui-icon-foward ui-btn-inline ui-btn-b"
+							data-theme="a" data-transition="slide" id="confirmar_rec">Confirmar</a>
+		   </div>
+		   <div></div>
+		</div>
+		
+</div>
+
+
+	
+	</div>
+	
+	</div>
+	
+    </div> <!-- end main content-->
+	
+
+  <div data-role="footer" data-position="fixed" data-theme="a" align="right" id="put_imag">
+        <a href="#login" data-transition="flip"
+		class="ui-btn ui-corner-all ui-btn-inline footer-button-right ui-btn-b ui-btn-icon-right ui-icon-carat-r">Mais Acções</a>
+ </div> <!--end main footer -->
+ 
+  <!-- ------------------------------------------------SESSAO DE POPUP ------------------->
+
+
+<!----------------------- panel login-->
+
+ <div data-role="panel" data-dismissible="false" data-position="left" style="width: 24em;"
+   data-display="overlay" data-theme="a" id="login">
+   
+   <div style="float:right"> 
+   
+    <input data-icon="delete" class="sair" data-iconpos="notext" value="Icon only" type="button">
+    		 
+   </div>
+   
+      <div class="ui-corner-all custom-corners" >
+            <br> <br> <br> <br>
+
+          <div class="ui-bar ui-bar-b" style="padding:10px" ><h3>Opções de Configuração</h3></div>
+		
+		   <div class="ui-body ui-body-a" style="padding-bottom:5em">
+
+            <p style="text-align:justify">O modo de acesso offline Configurado permite
+			registar pauta por tipo de  Avaliação de disciplina caso esteja desconectado a internet,
+                             sendo que, neste modulo o docente pode realizar 
+							  modificações necessarias e enviar a pauta devidamente terminada. </p>
+            <br> <br> <br> <br><br> <br>
+
+            <h5 style="color:green; font-size:15px;">Ver Mais ...</h5>
+			
+			 <ul data-theme="a" data-inset="true" class="menu_opcao" data-role="listview" style="font:serif;font-size:13px;">
+
+                 <li class="ui-bar-a" data-theme="b">Seleccionar opcção</li>
+                 <li class ="ui-bar-a go_offline">Iniciar o Modulo Offline</li>
+                 <li value="1" class="ui-bar-a" onclick="obter_pdf(this.value)">Manual de Introdução</li>
+					 
+					 
+            </ul>
+
+
+      </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+
+
+   var acess = 0, vez =0;
+
+          $(document).on('swipeleft', function (event,ui){
+                    $("#login").panel('close');
+          })
+
+          $(document).on('swiperight', function (event,ui){
+                    $("#login").panel('open');
+
+          })
+
+		   
+       
+   $(document).ready(function() {
+
+       $('.go_offline').click(function(){
+           window.location="offlineApp/Docente_offline.html";
+       })
+   
+	
+		$('.eventos_alt1').hide();
+		$('.eventos_alt2').hide();
+		$('.esqueceu_senha').hide();
+		
+		// botao volta do menu solitar dados de autenticacao;
+		
+	$('#btnBack').click(function(){
+	
+		$('.login_ctr').show('slow');
+		$('.esqueceu_senha').hide('slow');
+	
+	});
+ 
+	
+	$('.more_events').click(function (){
+		
+		if (vez == 0){
+		
+		    $('.eventos_alt0').hide();
+		    $('.eventos_alt1').show('slow');
+			vez++;
+		return;
+		}
+		
+		if (vez == 1){
+		
+		    $('.eventos_alt1').hide();
+			$('.eventos_alt2').show('slow');
+			vez++;
+		return;
+		}
+		if (vez == 2){
+		
+		
+			$('.eventos_alt0').show();
+			$('.eventos_alt2').hide();
+			
+		  vez = 0;
+		 return;
+		}
+	})
+	
+	$('.sair').click(function(){
+		$('#login').panel('close');
+	})
+
+
+    $('#recupera_senha').hide();
+    $('exitDialog').hide();
+
+     //recover();
+
+         $('#name').on('change', function(){
+
+           if ($('#name').val() == " "){
+                            $('#ac_name').text("* Obrigatorio").css('color','red').fadeOut(1000);
+                        }
+            })
+
+         $('#pass').on('change',function(){
+            if ($('#pass').val() == ""){
+                $('#ac_pass').text("* Obrigatorio").css('color','red').fadeOut(1000);
+            }
+            })
+
+          $('#btnlogin').on('click', function (){
+             if ($('#name').val() == " "){
+                $('#ac_name').text("* Obrigatorio").css('color','red').fadeOut(5000);
+            }
+
+            if ($('#pass').val() == ""){
+                $('#ac_pass').text("* Obrigatorio").css('color','red').fadeOut(5000);
+            }
+            if ($('#name').val() == "" && $('#name').val() == ""){
+                $('#myresultlogin').text("* Todos campos obrigatorios").css('color','red').fadeOut(1000);
+                        }
+           })
+
+         $('#popupMenu').on('click','li', function(){
+         $('#popupMenu li.current').removeClass('current').css({'background':'white', 'color':'black'});
+         $(this).closest('li').addClass('current').css({'background':'#365775', 'color':'white'});
+
+          });
+
+
+     $('#recupera_senha').click(function() {
+         $('.lista_geral').hide();
+     });
+
+
+    $('#active_login').click(function (){
+
+         $('.lista_geral').show(2000);
+		 $('#recuperar_senha').remove();
+		 
+    });
+
+    $('.myMenu li.refresh').click(function() {
+
+         $('.lista_geral').show('slow');
+		 
+
+    });
+	$('.logoff').click (function (){
+		$('.eventos').css('float','right');
+		
+	})
+	
+	$('#open_log').click(function(){
+	
+		$('.eventos').css('float','left');
+	})
+	/*----------------------------eVENTOS ARA IMAGEM ---------------*/
+	
+	
+	$('.eventos ul li').click(function(e){
+	
+		if (e.target.tagName === "IMG"){
+		
+	
+			 var myoverlay = document.createElement('div');
+			 myoverlay.id='overlay';
+			 
+			 document.body.appendChild(myoverlay);
+			 
+			 myoverlay.style.position='absolute';
+			 myoverlay.style.top = 0;
+			 myoverlay.style.backgroundColor='rgba(0,0,0,0.7)';
+			 myoverlay.style.cursor='pointer';
+			 myoverlay.style.width=window.innerWidth + 'px';
+			 myoverlay.style.height=window.innerHeight + 'px';
+			 myoverlay.style.top= window.pageYOffset + 'px';
+			 myoverlay.style.left= window.pageXOffset +'px';
+			
+			 window.addEventListener('scroll', function(){
+			 
+				if (myoverlay){
+				
+					myoverlay.style.top = window.pageXOffset + 'px';
+					myoverlay.style.left =window.pageXOffset + 'px';
+				}
+				
+			 }, false);
+			 
+			 
+			 window.addEventListener('resize', function(){
+			 
+				if (myoverlay){
+				
+					myoverlay.style.width = window.innerWidth + 'px';
+					myoverlay.style.height = window.innerHeight + 'px';
+					myoverlay.style.top = window.pageYOffset + 'px';
+					myoverlay.style.left = window.pageXOffset + 'px';
+					
+				}
+			 
+			 },false);
+			 
+			 
+			
+			 
+		}
+			
+    });
+	
+
+	$('#active_login').click(function(){
+				
+		$('#overlay').remove();	
+    })
+	
+	$('.close_g1').click(function(){
+				
+	    $('#overlay').remove();
+			
+	})
+	
+	$('#recupera_senhas').click(function(){
+	
+		$('.login_ctr').hide('slow');
+		$('.esqueceu_senha').show('slow');
+		//$('#popupLogin').css('width','350px');
+			
+	})
+	
+    $('#confirmar_rec').click(function() {
+
+        var nome = $('#rec_nome').val();
+        var el= $('#rec_email').val();
+		
+        $.ajax({
+
+                url:"view/Processa_docente.php",
+                type:"POST",
+				
+                data:{email:el, fullname:nome, acao:1},
+
+                success:function (result){
+				   
+					$('#popupLogin').popup('close');
+					var texto = jQuery.parseJSON(result);
+					jAlert(texto,'Confirmação', function(r){
+					
+						if (r){
+							$('.esqueceu_senha').hide();
+							$('.login_ctr').show();
+							$('#popupLogin').popup('open');
+							//$('#popupLogin').css('width','310px');
+						}
+					});
+			 
+               } 
+			   
+		});
+
+    });
+			 
+	/*------------------------    tratar imagem ----------------------------------*/
+	
+	$('.f1').click(function(){$('#info1').show('slow');})
+
+       $('.menu_opcao li').click(function (){
+
+           $('.menu_opcao li.current').removeClass('current').css({'background':'white', 'color':'black'});
+           $(this).closest('li').addClass('current');
+           $(this).closest('li').css({'background':'rgba(220,220,250,255)', 'color':'blue'});
+
+       })
+			 
+  });
+  
+  // fim funcoes JQUERY -----------------------------------------------------------
+		 
+		
+        function obter_pdf(item)  {
+			window.location= "relatorios/Manual_utilizador.php?acao=1";
+
+        }
+
+
+        function push_to_left() {
+            $('.lista_geral').slideUp('slow');
+			$('.recuperar_senha').remove();
+
+        }
+ 
+		
+</script>

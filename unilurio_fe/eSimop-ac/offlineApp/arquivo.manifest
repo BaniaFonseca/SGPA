@@ -1,0 +1,46 @@
+CACHE MANIFEST
+#Isso é um comentário
+ 
+CACHE:
+
+#directivas docente_offline.html
+
+../../jquery-mobile/jquery.mobile-1.0.min.css
+../../jquery-mobile/jquery-1.6.4.min.js
+../../jquery-mobile/jquery.mobile-1.0.min.js
+main.css
+bwH5LS.js
+../css/images/bars-white.png
+../css/images/user-white.png
+../../jquery-mobile/images/ajax-loader.png
+../../jquery-mobile/images/icons-18-white.png
+../../eSimop-ac/offline_app/Docente_offline.html
+../../eSimop-ac/index.html
+
+#directivas do index.html
+
+../../_assets/css/jquery.mobile-1.4.3.min.css
+../../_assets/css/jquery.mobile.structure-1.4.3.min.css
+../../_assets/css/jquery.mobile.theme-1.4.3.min.css
+../css/cabecalho.css
+../css/images/home-white.png
+
+../css/table_style.css
+../../_assets/js/jquery-1.7.1.min.js
+../../_assets/js/jquery.mobile-1.4.3.min.js
+../js/js_function.js
+../js/js_data_base.js
+
+../js/js_data_base.js
+../js/js_function.js
+../img/logo_unilurio.jpg
+../../_assets/css/images/ajax-loader.gif
+
+ 
+NETWORK:
+	*
+ 
+FALLBACK:
+
+../../eSimop-ac/index.html
+
